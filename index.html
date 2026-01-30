@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackSolidPro - Solutions GPS de Tracking et Géolocalisation</title>
+    <meta name="description" content="TrackSolidPro - Société spécialisée dans les solutions GPS de tracking, géolocalisation de flotte et sécurité. Vente de boîtiers GPS professionnels en Tunisie.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="GPS Tunisie, tracking véhicules, géolocalisation flotte, boîtier GPS, sécurité véhicule, gestion flotte automobile">
+    <meta name="author" content="TrackSolidPro">
+    <meta property="og:title" content="TrackSolidPro - Solutions GPS Professionnelles">
+    <meta property="og:description" content="Solutions de tracking et géolocalisation GPS pour professionnels en Tunisie">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tracksolidpro.tn">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    
+    <!-- Font Awesome Icons (optionnel, léger) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme" data-theme="light">
+    <!-- Header avec navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="left-controls">
+                <div class="theme-switcher">
+                    <button class="theme-btn" id="themeToggle" aria-pressed="false" data-key-title="theme_light_title" title="Mode clair">
+                        <i class="fas fa-sun" id="themeIcon"></i>
+                    </button>
+                </div>
+                <!-- Hidden elements to store localized titles for theme (read by JS) -->
+                <span class="visually-hidden" data-key-title="theme_light_title"></span>
+                <span class="visually-hidden" data-key-title="theme_dark_title"></span>
+            </div>
+
+            <div class="logo">
+                <h1><a href="index.html" data-key="header_logo">TrackSolidPro</a></h1>
+                <span class="tagline" data-key="header_tagline">Solutions GPS intelligentes</span>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#accueil" data-key="nav_home">Accueil</a></li>
+                    <li><a href="#entreprise" data-key="nav_company">Entreprise</a></li>
+                    <li><a href="#services" data-key="nav_services">Services</a></li>
+                    <li><a href="#produits" data-key="nav_products">Produits</a></li>
+                    <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="controls">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="fr" aria-label="Français" data-key-title="lang_fr_title" title="Français">
+                        <img src="assets/icons/flag-fr.svg" alt="Drapeau France">
+                    </button>
+                    <button class="lang-btn" data-lang="en" aria-label="English" data-key-title="lang_en_title" title="English">
+                        <img src="assets/icons/flag-us.svg" alt="Flag USA">
+                    </button>
+                    <button class="lang-btn" data-lang="ar" aria-label="العربية" data-key-title="lang_ar_title" title="العربية">
+                        <img src="assets/icons/flag-tn.svg" alt="علم تونس">
+                    </button>
+                </div>
+            </div>
+
+            <button class="menu-toggle" data-key-aria="menu_mobile_aria" aria-label="Menu mobile">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section Hero -->
+        <section id="accueil" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title" data-key="hero_title">Solutions GPS Professionnelles</h2>
+                    <p class="hero-subtitle" data-key="hero_subtitle">Tracking, géolocalisation et sécurité pour votre flotte automobile</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary" data-key="hero_cta_primary">Demander un devis</a>
+                        <a href="#produits" class="btn btn-secondary" data-key="hero_cta_secondary">Voir nos produits</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="gps-visual"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dans votre section hero, après les boutons existants -->
+        <div class="download-buttons">
+            <a href="https://apps.apple.com/app-id" target="_blank" rel="noopener noreferrer" class="download-btn app-store">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                    data-key-alt="download_appstore_alt"
+                    alt="Télécharger sur l'App Store" 
+                    width="150">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.tracksolidpro" target="_blank" rel="noopener noreferrer" class="download-btn google-play">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                    data-key-alt="download_play_alt"
+                    alt="Disponible sur Google Play" 
+                    width="150">
+            </a>
+        </div>
+
+
+        <!-- Section Entreprise -->
+        <section id="entreprise" class="section">
+            <div class="container">
+                <h2 class="section-title" data-key="company_title">Notre Entreprise</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-key="company_p1">TrackSolidPro est une société tunisienne spécialisée dans les solutions de géolocalisation par GPS. Forts de plus de 10 ans d'expérience, nous fournissons des systèmes de tracking adaptés aux besoins des professionnels.</p>
+                        <p data-key="company_p2">Notre mission : optimiser la gestion de votre flotte automobile, améliorer la sécurité et réduire vos coûts opérationnels grâce à des technologies GPS de pointe.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label" data-key="stat_clients_label">Clients satisfaits</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label" data-key="stat_years_label">Ans d'expérience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label" data-key="stat_support_label">Support technique</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Services -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <h2 class="section-title" data-key="services_title">Nos Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 data-key="service1_title">Tracking en temps réel</h3>
+                        <p data-key="service1_desc">Surveillance précise de vos véhicules avec mise à jour en temps réel de leur position.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 data-key="service2_title">Gestion de flotte</h3>
+                        <p data-key="service2_desc">Optimisation des trajets, réduction de la consommation et suivi des conducteurs.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 data-key="service3_title">Sécurité renforcée</h3>
+                        <p data-key="service3_desc">Alertes anti-vol, géofencing et protection de vos actifs mobiles.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 data-key="service4_title">Rapports détaillés</h3>
+                        <p data-key="service4_desc">Analyses et statistiques pour une meilleure prise de décision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Produits -->
+        <section id="produits" class="section products-section">
+            <div class="container">
+                <h2 class="section-title" data-key="products_title">Nos Produits GPS</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="gps-box basic"></div>
+                        </div>
+                        <h3 data-key="product1_name">Boîtier GPS Standard</h3>
+                        <ul class="product-features">
+                            <li data-key="product1_feature1">Géolocalisation en temps réel</li>
+                            <li data-key="product1_feature2">Batterie longue durée</li>
+                            <li data-key="product1_feature3">Installation facile</li>
+                            <li data-key="product1_feature4">Application mobile incluse</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-key="product1_cta">Demander plus d'info</a>
+                    </div>
+                    <div class="product-card featured">
+                        <div class="product-badge" data-key="product2_badge">Populaire</div>
+                        <div class="product-image">
+                            <div class="gps-box pro"></div>
+                        </div>
+                        <h3 data-key="product2_name">Boîtier GPS Professionnel</h3>
+                        <ul class="product-features">
+                            <li data-key="product2_feature1">Toutes fonctions du Standard +</li>
+                            <li data-key="product2_feature2">Capteur de mouvement</li>
+                            <li data-key="product2_feature3">Alertes immédiates</li>
+                            <li data-key="product2_feature4">Rapports avancés</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary" data-key="product2_cta">Demander un devis</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="gps-box enterprise"></div>
+                        </div>
+                        <h3 data-key="product3_name">Solution Entreprise</h3>
+                        <ul class="product-features">
+                            <li data-key="product3_feature1">Gestion de flotte complète</li>
+                            <li data-key="product3_feature2">API d'intégration</li>
+                            <li data-key="product3_feature3">Support prioritaire</li>
+                            <li data-key="product3_feature4">Formation incluse</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" data-key="product3_cta">Contactez-nous</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title" data-key="contact_title">Contactez-nous</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3 data-key="contact_info_title">Nos coordonnées</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p data-key="phone_label">Téléphone</p>
+                                <a href="tel:+21670123456">+216 70 123 456</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p data-key="email_label">Email</p>
+                                <a href="mailto:contact@tracksolidpro.tn">contact@tracksolidpro.tn</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p data-key="whatsapp_label">WhatsApp</p>
+                                                <a href="https://wa.me/21670123456" target="_blank" rel="noopener noreferrer" class="whatsapp-link" data-key="whatsapp_link">Discuter sur WhatsApp</a>
+                            </div>
+                        </div>
+                        <div class="map-container">
+                            <h4 data-key="map_title">Localisation</h4>
+                            <p data-key="map_city">Tunis, Tunisie</p>
+                            <div class="map">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12775.832238446172!2d10.181530795625155!3d36.80658012682507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7ef543%3A0xd671924e714a0275!2sTunis!5e0!3m2!1sfr!2stn!4v1699999999999!5m2!1sfr!2stn" 
+                                    width="100%" 
+                                    height="200" 
+                                    title="Carte - Tunis" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm" action="contact.php" method="POST">
+                            <div class="form-group">
+                                <label for="name" data-key="form_name_label">Nom complet *</label>
+                                <input type="text" id="name" name="name" required data-key-placeholder="form_name_placeholder" placeholder="Nom complet">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-key="form_email_label">Email *</label>
+                                <input type="email" id="email" name="email" required data-key-placeholder="form_email_placeholder" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-key="form_phone_label">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" data-key-placeholder="form_phone_placeholder" placeholder="Téléphone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" data-key="form_subject_label">Sujet *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" data-key="subject_select_option">Sélectionnez un sujet</option>
+                                    <option value="devis" data-key="subject_devis">Demande de devis</option>
+                                    <option value="info" data-key="subject_info">Demande d'information</option>
+                                    <option value="support" data-key="subject_support">Support technique</option>
+                                    <option value="autre" data-key="subject_other">Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-key="form_message_label">Message *</label>
+                                <textarea id="message" name="message" rows="5" required data-key-placeholder="form_message_placeholder" placeholder="Votre message..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-key="form_submit">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 data-key="footer_logo">TrackSolidPro</h3>
+                    <p data-key="footer_tagline">Solutions GPS professionnelles en Tunisie</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-key="footer_links_title">Liens rapides</h4>
+                    <ul>
+                        <li><a href="#accueil" data-key="nav_home">Accueil</a></li>
+                        <li><a href="#entreprise" data-key="nav_company">Entreprise</a></li>
+                        <li><a href="#services" data-key="nav_services">Services</a></li>
+                        <li><a href="#produits" data-key="nav_products">Produits</a></li>
+                        <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-key="footer_contact_title">Contact</h4>
+                    <p><i class="fas fa-phone"></i> +216 70 123 456</p>
+                    <p><i class="fas fa-envelope"></i> contact@tracksolidpro.tn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> <span data-key="footer_copyright">TrackSolidPro.tn - Tous droits réservés</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/language-switcher.js"></script>
+</body>
+</html>

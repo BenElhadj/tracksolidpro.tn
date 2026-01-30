@@ -1,0 +1,73 @@
+/* Thème clair (par défaut) */
+.light-theme {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+}
+
+/* Thème sombre */
+.dark-theme {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --border-color: #475569;
+    
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.dark-theme .main-header,
+.dark-theme .service-card,
+.dark-theme .product-card,
+.dark-theme .stat,
+.dark-theme .form-group input,
+.dark-theme .form-group select,
+.dark-theme .form-group textarea {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.dark-theme .hero {
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+}
+
+.dark-theme .main-nav a,
+.dark-theme .section-title,
+.dark-theme .hero-title,
+.dark-theme .service-card h3,
+.dark-theme .product-card h3,
+.dark-theme .footer-links h4,
+.dark-theme .footer-contact h4,
+.dark-theme .form-group label {
+    color: var(--text-primary);
+}
+
+.dark-theme .hero-subtitle,
+.dark-theme .stat-label,
+.dark-theme .tagline,
+.dark-theme .contact-item p,
+.dark-theme .footer-links a {
+    color: var(--text-secondary);
+}
+
+.dark-theme .gps-visual {
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+}
+
+.dark-theme .product-features li {
+    border-bottom-color: var(--border-color);
+}
+
+.dark-theme .footer-links a:hover {
+    color: white;
+}
+
+.dark-theme .map {
+    filter: brightness(0.8) contrast(1.2);
+}
