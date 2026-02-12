@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrackSolidPro - Solutions GPS de Tracking et Géolocalisation</title>
     <meta name="description" content="TrackSolidPro - Société spécialisée dans les solutions GPS de tracking, géolocalisation de flotte et sécurité. Vente de boîtiers GPS professionnels en Tunisie.">
-    
+
     <!-- SEO Meta Tags -->
     <meta name="keywords" content="GPS Tunisie, tracking véhicules, géolocalisation flotte, boîtier GPS, sécurité véhicule, gestion flotte automobile">
     <meta name="author" content="TrackSolidPro">
@@ -13,15 +13,16 @@
     <meta property="og:description" content="Solutions de tracking et géolocalisation GPS pour professionnels en Tunisie">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.tracksolidpro.tn">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/logo.png">
-    
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/themes.css">
-    
+    <link rel="stylesheet" href="css/carousel-scoped.css">
+
     <!-- Font Awesome Icons (optionnel, léger) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -93,7 +94,64 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="gps-visual"></div>
+                    <!-- Carousel component inserted here -->
+                    <div class="main-container">
+                        <div class="carousel-section">
+                            <div class="carousel-container">
+                                <button class="nav-arrow up">
+                                    <img src="assets/top.png" alt="Up">
+                                </button>
+                                <div class="carousel-track">
+                                    <div class="card" data-index="0">
+                                        <img src="https://ik.imagekit.io/gopichakradhar/luffy/o1.jpeg?updatedAt=1754289569411" alt="Team Member 1">
+                                    </div>
+                                    <div class="card" data-index="1">
+                                        <img src="https://ik.imagekit.io/gopichakradhar/luffy/o2.jpeg?updatedAt=1754289569307" alt="Team Member 2">
+                                    </div>
+                                    <div class="card" data-index="2">
+                                        <img src="https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398" alt="Team Member 3">
+                                    </div>
+                                    <div class="card" data-index="3">
+                                        <img src="https://ik.imagekit.io/gopichakradhar/luffy/o3.jpeg?updatedAt=1754289569422" alt="Team Member 4">
+                                    </div>
+                                    <div class="card" data-index="4">
+                                        <img src="https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406" alt="Team Member 5">
+                                    </div>
+                                    <div class="card" data-index="5">
+                                        <img src="https://ik.imagekit.io/gopichakradhar/luffy/o6.jpeg?updatedAt=1754289569438" alt="Team Member 6">
+                                    </div>
+                                </div>
+                                <button class="nav-arrow down">
+                                    <img src="https://ik.imagekit.io/gopichakradhar/icons/down.png?updatedAt=1754290523249" alt="Down">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="controls-section">
+                            <div class="nav-controls">
+                                <button class="nav-arrow up">
+                                    <img src="https://ik.imagekit.io/gopichakradhar/icons/top.png?updatedAt=1754290522765" alt="Up">
+                                </button>
+                                <button class="nav-arrow down">
+                                    <img src="https://ik.imagekit.io/gopichakradhar/icons/down.png?updatedAt=1754290523249" alt="Down">
+                                </button>
+                            </div>
+
+                            <div class="member-info">
+                                <h2 class="member-name">Emily Kim</h2>
+                                <p class="member-role">Founder</p>
+                            </div>
+
+                            <div class="dots">
+                                <div class="dot active" data-index="0"></div>
+                                <div class="dot" data-index="1"></div>
+                                <div class="dot" data-index="2"></div>
+                                <div class="dot" data-index="3"></div>
+                                <div class="dot" data-index="4"></div>
+                                <div class="dot" data-index="5"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -101,15 +159,15 @@
         <!-- Dans votre section hero, après les boutons existants -->
         <div class="download-buttons">
             <a href="https://apps.apple.com/app-id" target="_blank" rel="noopener noreferrer" class="download-btn app-store">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                     data-key-alt="download_appstore_alt"
-                    alt="Télécharger sur l'App Store" 
+                    alt="Télécharger sur l'App Store"
                     width="150">
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.tracksolidpro" target="_blank" rel="noopener noreferrer" class="download-btn google-play">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                     data-key-alt="download_play_alt"
-                    alt="Disponible sur Google Play" 
+                    alt="Disponible sur Google Play"
                     width="150">
             </a>
             <a href="https://tracksolidpro.com/" target="_blank" rel="noopener noreferrer" class="download-btn desktop-btn">
@@ -272,20 +330,20 @@
                             <h4 data-key="map_title">Localisation</h4>
                             <p data-key="map_city">Tunis, Tunisie</p>
                             <div class="map">
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12775.832238446172!2d10.181530795625155!3d36.80658012682507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7ef543%3A0xd671924e714a0275!2sTunis!5e0!3m2!1sfr!2stn!4v1699999999999!5m2!1sfr!2stn" 
-                                    width="100%" 
-                                    height="200" 
-                                    title="Carte - Tunis" 
-                                    style="border:0;" 
-                                    allowfullscreen="" 
-                                    loading="lazy" 
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12775.832238446172!2d10.181530795625155!3d36.80658012682507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7ef543%3A0xd671924e714a0275!2sTunis!5e0!3m2!1sfr!2stn!4v1699999999999!5m2!1sfr!2stn"
+                                    width="100%"
+                                    height="200"
+                                    title="Carte - Tunis"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade">
                                 </iframe>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="contact-form">
                         <form id="contactForm" action="contact.php" method="POST">
                             <div class="form-group">
@@ -354,5 +412,6 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/language-switcher.js"></script>
+    <script src="js/carousel-scoped.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+{
+  "name": "tracksolidpro.tn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TrackSolid Pro local dev with PHP + BrowserSync",
+  "scripts": {
+    "php": "php -S localhost:8000 -t .",
+    "bs": "browser-sync start --proxy \"localhost:8000\" --files \"css/**/*, js/**/*, **/*.php, lang/**/*.json, images/**/*.*\" --no-ui --no-notify --port 3000",
+    "dev": "concurrently --kill-others \"npm:php\" \"npm:bs\""
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "concurrently": "^9.2.1"
+  }
+}
