@@ -22,6 +22,7 @@
     let isAnimating = false;
 
     function updateCarousel(newIndex) {
+        console.log('[carousel] updateCarousel called ->', newIndex);
         if (isAnimating) return;
         isAnimating = true;
 
@@ -67,19 +68,97 @@
     }
 
     upArrows.forEach(arrow => {
-        arrow.addEventListener('click', () => updateCarousel(currentIndex - 1));
+        arrow.addEventListener('click', (e) => {
+            console.log('[carousel] up arrow clicked');
+            e.stopPropagation();
+            updateCarousel(currentIndex - 1);
+        });
     });
 
     downArrows.forEach(arrow => {
-        arrow.addEventListener('click', () => updateCarousel(currentIndex + 1));
+        arrow.addEventListener('click', (e) => {
+            console.log('[carousel] down arrow clicked');
+            e.stopPropagation();
+            updateCarousel(currentIndex + 1);
+        });
     });
 
     dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => updateCarousel(i));
+        dot.addEventListener('click', (e) => {
+            console.log('[carousel] dot clicked', i);
+            e.stopPropagation();
+            updateCarousel(i);
+        });
     });
 
     cards.forEach((card, i) => {
-        card.addEventListener('click', () => updateCarousel(i));
+        card.addEventListener('click', (e) => {
+            console.log('[carousel] card direct click', i);
+            e.stopPropagation();
+            updateCarousel(i);
+        });
+    });
+
+    // Add a delegated click handler on root to ensure clicks bubble through
+    // even if some elements are repositioned/overlaid by CSS on small screens.
+    root.addEventListener('click', (e) => {
+        console.log('[carousel] delegated click on root ->', e.target && e.target.className);
+        const arrowUp = e.target.closest('.nav-arrow.up');
+        if (arrowUp) {
+            e.preventDefault();
+            updateCarousel(currentIndex - 1);
+            return;
+        }
+
+        const arrowDown = e.target.closest('.nav-arrow.down');
+        if (arrowDown) {
+            e.preventDefault();
+            updateCarousel(currentIndex + 1);
+            return;
+        }
+
+        const dot = e.target.closest('.dot');
+        if (dot && dot.dataset && typeof dot.dataset.index !== 'undefined') {
+            const idx = parseInt(dot.dataset.index, 10);
+            if (!isNaN(idx)) updateCarousel(idx);
+            return;
+        }
+
+        const clickedCard = e.target.closest('.card');
+        if (clickedCard && clickedCard.dataset && typeof clickedCard.dataset.index !== 'undefined') {
+            const idx = parseInt(clickedCard.dataset.index, 10);
+            console.log('[carousel] delegated card click ->', idx);
+            if (!isNaN(idx)) updateCarousel(idx);
+            return;
+        }
+
+        // Fallback: sometimes the event target is the track even when a card is visually under the pointer
+        // Try to compute which card (if any) is under the click point and use it.
+        const track = e.target.closest('.carousel-track');
+        if (track) {
+            const x = e.clientX;
+            const y = e.clientY;
+            // try elementFromPoint first
+            let elUnder = document.elementFromPoint(x, y);
+            let cardUnder = elUnder && elUnder.closest ? elUnder.closest('.card') : null;
+            if (!cardUnder) {
+                // fallback: check bounding rects of cards
+                for (let i = 0; i < cards.length; i++) {
+                    const rect = cards[i].getBoundingClientRect();
+                    if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
+                        cardUnder = cards[i];
+                        break;
+                    }
+                }
+            }
+
+            if (cardUnder && cardUnder.dataset && typeof cardUnder.dataset.index !== 'undefined') {
+                const idx = parseInt(cardUnder.dataset.index, 10);
+                console.log('[carousel] fallback card detection ->', idx, 'elUnder=', elUnder && elUnder.className);
+                if (!isNaN(idx)) updateCarousel(idx);
+                return;
+            }
+        }
     });
 
     // Keyboard navigation — global but acts only if carousel exists
