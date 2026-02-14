@@ -776,6 +776,13 @@ p {
     opacity: 0.9;
 }
 
+/* Ensure all download button images behave the same */
+.download-btn img {
+    display: block;
+    width: 150px;
+    height: auto;
+}
+
 /* Sur mobile, empiler les boutons */
 @media (max-width: 480px) {
     .download-buttons {
@@ -785,6 +792,67 @@ p {
     
     .download-btn img {
         width: 140px;
+    }
+}
+
+/* Mobile behaviour: language switcher becomes a compact burger that shows only the active flag
+   and expands when tapped. Scoped to max-width 480px to avoid changing desktop behaviour. */
+@media (max-width: 480px) {
+    .language-switcher {
+        position: relative;
+        /* small pill with only selected flag visible */
+        padding: 4px;
+        background: transparent;
+        border-radius: 8px;
+    }
+
+    .language-switcher .lang-btn {
+        display: none; /* hide all flags by default on mobile */
+        width: 24px;
+        height: 16px;
+        padding: 0;
+        margin: 0;
+        border-radius: 4px;
+    }
+
+    .language-switcher .lang-btn img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    /* show only the active flag */
+    .language-switcher .lang-btn.active {
+        display: inline-block;
+    }
+
+    /* when open, show all flags in a vertical column */
+    .language-switcher.open {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: rgba(255,255,255,0.98);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .language-switcher.open .lang-btn {
+        display: inline-block;
+        width: 24px;
+        height: 16px;
+    }
+
+    /* small transition for smoother open/close */
+    .language-switcher,
+    .language-switcher .lang-btn {
+        transition: all 180ms ease;
+    }
+
+    /* ensure .controls layout still fits */
+    .controls {
+        gap: 0.5rem;
     }
 }
 
